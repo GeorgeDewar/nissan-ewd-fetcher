@@ -225,7 +225,7 @@ mkdir -p vehicle/consvg
 grep '<svgfile>' vehicle/connector.xml | cut -d'>' -f2 | cut -d'<' -f1 | sort | uniq > /tmp/conn_svgs.txt
 cat /tmp/conn_svgs.txt | while read line 
 do
-   wget -nc $path/vehicle/consvg/$line -O vehicle/consvg/$line
+   fetch /vehicle/consvg/$line
 done
 
 sed -n '/<figgroup name="Circuit Diagram">/,/<\/figgroup>/p' vehicle/figlist.xml > /tmp/figgroup_circuit.xml
@@ -239,17 +239,17 @@ mkdir -p vehicle/poeama/svg
 grep '<svgfile>' /tmp/figgroup_circuit.xml | cut -d'>' -f2 | cut -d'<' -f1 | sort | uniq > /tmp/figgroup_circuit_svgs.txt
 cat /tmp/figgroup_circuit_svgs.txt | while read line 
 do
-   wget -nc $path/vehicle/circuit/svg/$line -O vehicle/circuit/svg/$line
+   fetch /vehicle/circuit/svg/$line
 done
 
 grep '<svgfile>' /tmp/figgroup_harness.xml | cut -d'>' -f2 | cut -d'<' -f1 | sort | uniq > /tmp/figgroup_harness_svgs.txt
 cat /tmp/figgroup_harness_svgs.txt | while read line 
 do
-   wget -nc $path/vehicle/harness/svg/$line -O vehicle/harness/svg/$line
+   fetch /vehicle/harness/svg/$line
 done
 
 grep '<svgfile>' /tmp/figgroup_power.xml | cut -d'>' -f2 | cut -d'<' -f1 | sort | uniq > /tmp/figgroup_power_svgs.txt
 cat /tmp/figgroup_power_svgs.txt | while read line 
 do
-   wget -nc $path/vehicle/poeama/svg/$line -O vehicle/poeama/svg/$line
+   fetch /vehicle/poeama/svg/$line
 done
