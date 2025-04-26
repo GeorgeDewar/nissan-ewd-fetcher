@@ -8,6 +8,8 @@ https://www.nissan-techinfo.com/ via a subscription (ranging from one day to one
 This script can be used to store a backup copy of the EWD for a Nissan Vehicle that can be used
 offline, protecting vehicle owners' access to this information.
 
+_Tested on 2015 Nissan Leaf and 2019 Nissan Leaf._
+
 ## Usage instructions
 
 1. Purchase a one-day Online Viewing Subscription at https://www.nissan-techinfo.com/.
