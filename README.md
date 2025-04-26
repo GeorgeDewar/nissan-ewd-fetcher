@@ -17,7 +17,7 @@ _Tested on 2015 Nissan Leaf and 2019 Nissan Leaf._
 3. Open the Electronic Wiring Diagram and note the URL.
 4. Copy the URL up to /eWD, for example
    https://www.nissan-techinfo.com/abcdefg/sm/2019/Leaf/SM19EA1ZE1U2/eWD
-5. Execute ./fetch-ewd.sh <path_from_above>
+5. Execute ./fetch-ewd.sh <path_from_above> (requires Linux or WSL)
 
 The script should fetch all of the necessary files.
 
